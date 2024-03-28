@@ -26,7 +26,7 @@ export const authOptions: AuthOptions = {
         },
         password: {
           label: 'Password',
-          type: 'passord'
+          type: 'password'
         }
       },
       async authorize(credentials) {
@@ -57,7 +57,7 @@ export const authOptions: AuthOptions = {
   pages: {
     signIn: '/auth'
   },
-  debug: process.env.NODE_ENV === 'development',
+  // debug: process.env.NODE_ENV === 'development',
   adapter: PrismaAdapter(prismadb),
   session: { strategy: 'jwt' },
   jwt: {
